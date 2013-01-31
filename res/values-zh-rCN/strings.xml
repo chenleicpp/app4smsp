@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">短信弹窗</string>
+    <string name="popup_msg_send_suc">发送信息成功！</string>
+    <string name="popup_msg_send_fail">发送信息失败！</string>
+    <string name="popup_edit_hint">请输入信息</string>
+    <string name="popup_reply_btn">回复</string>
+    <string name="popup_msg_delete">删除短信成功</string>
+    <string name="popup_msg_delete_error">删除短信失败</string>
+    <string name="popup_msg_sending">正在发送中......</string>
+    <string name="popup_pref_title1">开启短信弹窗服务</string>
+    <string name="popup_pref_title2">点亮屏幕</string>    
+    <string name="popup_pref_summary">收到新短信时候自动弹窗</string>
+    <string name="popup_alert_text">确认删除？</string>
+    <string name="popup_alert_btn_ok">确定</string>
+    <string name="popup_alert_btn_cancel">取消</string>
+    <string name="popup_alert_text_title">警告!</string>
+    <string name="popup_screenon_summary">弹窗时点亮屏幕</string>
+
+</resources>

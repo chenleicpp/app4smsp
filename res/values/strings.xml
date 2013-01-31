@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SMSPopup</string>
+    <string name="popup_msg_send_suc">send sms succeed!</string>
+    <string name="popup_msg_send_fail">send sms failed!</string>
+    <string name="popup_edit_hint">Enter message~</string>
+    <string name="popup_reply_btn">reply</string>
+    <string name="popup_msg_delete">delete ok</string>
+    <string name="popup_msg_delete_error">delete error</string>
+    <string name="popup_msg_sending">sending...</string>
+    <string name="popup_pref_title1">enable popup sms</string>
+    <string name="popup_pref_title2">switch screen on</string>    
+    <string name="popup_pref_summary">show popup when sms reciewed</string>
+    <string name="popup_alert_text">Confirm to delete?</string>
+    <string name="popup_alert_btn_ok">Ok</string>
+    <string name="popup_alert_btn_cancel">Cancel</string>
+    <string name="popup_alert_text_title">Warming!</string>
+    <string name="popup_screenon_summary">screen on when sms reciewed</string>
+
+</resources>

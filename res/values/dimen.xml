@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="popup_window_width">300dip</dimen>
+    <dimen name="popup_window_height">263dip</dimen>
+    <dimen name="popup_iv_margin_left_right">5dip</dimen>
+    <dimen name="popup_iv_margin_left_right2">14dip</dimen>
+    <dimen name="popup_iv_margin_top">4dip</dimen>
+    <dimen name="popup_tv_name">20sp</dimen>
+    <dimen name="popup_tv_time">14sp</dimen>
+    <dimen name="popup_sc_height">131dip</dimen>
+</resources>

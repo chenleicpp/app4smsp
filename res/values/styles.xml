@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/popup_bg</item>
+    </style>
+
+</resources>
