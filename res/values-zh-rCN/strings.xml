@@ -17,5 +17,9 @@
     <string name="popup_alert_btn_cancel">取消</string>
     <string name="popup_alert_text_title">警告!</string>
     <string name="popup_screenon_summary">弹窗时点亮屏幕</string>
+    <string name="popup_enable_service">短信弹窗服务已开启</string>
+    <string name="popup_disable_service">短信弹窗服务已关闭</string>
+    <string name="popup_enable_screenon">点亮屏幕</string>
+    <string name="popup_disable_screenon">不点亮屏幕</string>
 
 </resources>

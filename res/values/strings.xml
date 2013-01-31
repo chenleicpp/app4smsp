@@ -17,5 +17,9 @@
     <string name="popup_alert_btn_cancel">Cancel</string>
     <string name="popup_alert_text_title">Warming!</string>
     <string name="popup_screenon_summary">screen on when sms reciewed</string>
+    <string name="popup_enable_service">popup service is already enable</string>
+    <string name="popup_disable_service">popup service is already disable</string>
+    <string name="popup_enable_screenon">popup when screen on</string>
+    <string name="popup_disable_screenon">popup when not screen on</string>
 
 </resources>
