@@ -145,7 +145,7 @@ public class PopupActivity extends Activity {
     private void myFinish() {
         if (mPopupSwipeView.getChildCount() == 1) {
             finish();
-            //MessagingNotification.cancelNotification(getApplicationContext(), MessagingNotification.getNotifyId());
+            PopupUtil.cancelNotification(getApplicationContext());
         }
     }
 
@@ -287,7 +287,7 @@ public class PopupActivity extends Activity {
                 mo.setMessageRead();
                 mPopupSwipeView.removeActiveMessage();
             }
-            //MessagingNotification.cancelNotification(getApplicationContext(), MessagingNotification.getNotifyId());
+            PopupUtil.cancelNotification(getApplicationContext());
             finish();
             return false;
         } 

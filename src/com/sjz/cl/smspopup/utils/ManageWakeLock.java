@@ -21,7 +21,7 @@ public class ManageWakeLock {
 
 	private static volatile PowerManager.WakeLock mWakeLock = null;
 	private static volatile PowerManager.WakeLock mPartialWakeLock = null;
-	private static final boolean PREFS_SCREENON_DEFAULT = true;
+	private static final boolean PREFS_SCREENON_DEFAULT = false;
 	private static final int PREFS_TIMEOUT_DEFAULT = 10;
 
 	public static synchronized void acquireFull(Context mContext) {
@@ -31,20 +31,16 @@ public class ManageWakeLock {
 			return;
 		}
 
-		PowerManager mPm = (PowerManager) mContext
-				.getSystemService(Context.POWER_SERVICE);
-		SharedPreferences mPrefs = PreferenceManager
-				.getDefaultSharedPreferences(mContext);
+		PowerManager mPm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+		SharedPreferences mPrefs = mContext.getSharedPreferences("popup", Context.MODE_PRIVATE);
 
 		// Let the cpu running,and keep the screen on in high light way,allow to
 		// close LED keylight
 		int flags = PowerManager.SCREEN_BRIGHT_WAKE_LOCK;
 
-		if (mPrefs.getBoolean("pref_enable_screenon_key",
-				PREFS_SCREENON_DEFAULT)) {
+		if (mPrefs.getBoolean("enable_screenon", PREFS_SCREENON_DEFAULT)) {
 			// Force to light the screen and LED keylight
-			flags |= PowerManager.ACQUIRE_CAUSES_WAKEUP
-					| PowerManager.ON_AFTER_RELEASE;
+			flags |= PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.ON_AFTER_RELEASE;
 		}
 
 		mWakeLock = mPm.newWakeLock(flags, TAG + ".full");
@@ -59,12 +55,10 @@ public class ManageWakeLock {
 		if (mPartialWakeLock != null)
 			return;
 
-		PowerManager mPm = (PowerManager) mContext
-				.getSystemService(Context.POWER_SERVICE);
+		PowerManager mPm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
 
 		// keep cpu running,but screen or LED keylight maybe not on
-		mPartialWakeLock = mPm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG
-				+ ".partial");
+		mPartialWakeLock = mPm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG + ".partial");
 		mPartialWakeLock.setReferenceCounted(false);
 
 		mPartialWakeLock.acquire();

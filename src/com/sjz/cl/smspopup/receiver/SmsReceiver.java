@@ -38,7 +38,7 @@ public class SmsReceiver extends BroadcastReceiver {
         mSPreferences = mCtx.getSharedPreferences(getDefaultSharedPreferencesName(mCtx),
                 getDefaultSharedPreferencesMode());
         //read the enable key to decide show popup
-        Boolean bEnable = mSPreferences.getBoolean(PRE_ENABLE_POPUP_KEY, true);
+        Boolean bEnable = mSPreferences.getBoolean("enable_service", true);
         /*
          * if top activity is at mms,not show popup windows
          */
@@ -54,7 +54,7 @@ public class SmsReceiver extends BroadcastReceiver {
     }
     
     private static String getDefaultSharedPreferencesName(Context context) {
-        return context.getPackageName() + "_preferences";
+        return "popup";
     }
 
     private static int getDefaultSharedPreferencesMode() {
